@@ -1,6 +1,11 @@
 <template>
   <div class="app">
-    <Navbar :activeSection="activeSection" @navigate="navigateToSection" />
+    <Navbar
+      :activeSection="activeSection"
+      :currentSectionIndex="currentSectionIndex"
+      :totalSections="sections.length"
+      @navigate="navigateToSection"
+    />
 
     <div class="scroll-wrapper" @wheel="handleScroll" ref="scrollWrapper">
       <div class="sections-container" ref="sectionsContainer">
@@ -26,16 +31,14 @@ import { onMounted, ref, onBeforeUnmount } from "vue";
 const sectionsContainer = ref(null);
 const sections = ["intro", "story", "heroes", "film", "team"];
 const currentSectionIndex = ref(0);
-const activeSection = ref(sections[currentSectionIndex.value]);
+const activeSection = ref(sections[0]);
 const isScrolling = ref(false);
 
 const isMobile = () => window.innerWidth < 768;
 
 onMounted(() => {
-  activeSection.value = sections[currentSectionIndex.value] || "intro";
-  // Initial position set
+  activeSection.value = sections[0];
   handleResize();
-  
   window.addEventListener("resize", handleResize);
   window.addEventListener("scroll", handleNativeScroll);
 });
@@ -47,28 +50,20 @@ onBeforeUnmount(() => {
 
 function handleNativeScroll() {
   if (!isMobile()) return;
-  
-  // Simple active section detection based on scroll position could go here
-  // For now, let's just stick to letting the user scroll naturally
 }
 
 function handleScroll(event) {
-  // If mobile, let native scroll handle it
   if (isMobile()) return;
-
   event.preventDefault();
-
   if (isScrolling.value) return;
 
   const delta = event.deltaY || event.deltaX || 0;
-
   if (Math.abs(delta) < 30) return;
 
   const direction = delta > 0 ? 1 : -1;
   const newIndex = currentSectionIndex.value + direction;
 
   if (newIndex < 0 || newIndex >= sections.length) return;
-
   scrollToIndex(newIndex);
 }
 
@@ -81,10 +76,8 @@ function navigateToSection(sectionId) {
     }
     return;
   }
-
   const sectionIndex = sections.indexOf(sectionId);
   if (sectionIndex === -1) return;
-
   scrollToIndex(sectionIndex);
 }
 
@@ -105,12 +98,10 @@ function scrollToIndex(index) {
 function handleResize() {
   const container = sectionsContainer.value;
   if (!container) return;
-  
+
   if (isMobile()) {
-    // Reset transform on mobile so vertical layout works
     container.style.transform = "none";
   } else {
-    // Restore horizontal position on desktop
     const scrollPosition = currentSectionIndex.value * window.innerWidth;
     container.style.transform = `translateX(-${scrollPosition}px)`;
   }
@@ -121,13 +112,11 @@ function handleResize() {
 .app {
   width: 100%;
   height: 100vh;
-  /* Unlock overflow on mobile so strict vertical scrolling works */
   overflow-y: auto;
   overflow-x: hidden;
   background: #000;
 }
 
-/* Ensure horizontal scroll lock only applies to desktop */
 @media (min-width: 768px) {
   .app {
     overflow: hidden;
@@ -136,7 +125,6 @@ function handleResize() {
 
 .scroll-wrapper {
   width: 100%;
-  /* Height auto on mobile to allow scrolling */
   height: auto;
   min-height: 100vh;
   position: relative;
@@ -151,7 +139,6 @@ function handleResize() {
 
 .sections-container {
   display: flex;
-  /* Column on mobile */
   flex-direction: column;
   width: 100%;
   height: auto;
@@ -163,7 +150,7 @@ function handleResize() {
   .sections-container {
     flex-direction: row;
     height: 100vh;
-    width: auto; /* Allow it to grow horizontally */
+    width: auto;
   }
 }
 
