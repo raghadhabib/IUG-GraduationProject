@@ -15,8 +15,8 @@
       <ul class="hidden md:flex list-none gap-6 lg:gap-10 items-center">
         <li v-for="item in navItems" :key="item.id" class="relative">
           <a
-            @click="scrollToSection(item.id)"
-            :href="`#${item.id}`"
+            @click.prevent="scrollToSection(item.id)"
+            href="#"
             class="transition-all duration-300 cursor-pointer"
             style="font-family: 'IBM Plex Sans', sans-serif; font-size: 13px; font-weight: 400;"
             :class="
@@ -64,8 +64,8 @@
         <ul class="flex flex-col gap-8 text-center">
           <li v-for="item in navItems" :key="item.id">
             <a
-              @click="scrollToSection(item.id)"
-              :href="`#${item.id}`"
+              @click.prevent="scrollToSection(item.id)"
+              href="#"
               class="text-xl font-medium tracking-[2px] uppercase transition-all duration-300 cursor-pointer block py-2"
               :class="
                 activeSection === item.id
@@ -95,11 +95,11 @@ defineProps({
 const emit = defineEmits(["navigate"]);
 
 const navItems = [
-  { id: "intro", name: "INTRO" },
-  { id: "story", name: "THE STORY" },
+  { id: "intro",  name: "INTRO" },
+  { id: "story",  name: "THE STORY" },
   { id: "heroes", name: "HEROES" },
-  { id: "film", name: "THE FILM" },
-  { id: "team", name: "TEAM" },
+  { id: "film",   name: "THE FILM" },
+  { id: "team",   name: "TEAM" },
 ];
 
 const isMenuOpen = ref(false);
