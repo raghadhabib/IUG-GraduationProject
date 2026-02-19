@@ -1,0 +1,146 @@
+<template>
+  <section
+    class="relative w-full h-full flex items-center justify-center overflow-hidden"
+  >
+    <div
+      class="absolute inset-0 bg-cover bg-center pointer-events-none"
+      :style="{ backgroundImage: `url(${bgImage})` }"
+    ></div>
+
+    <div class="relative z-10 text-center animate-[fadeInUp_1.5s_ease-out]">
+      <h1
+        class="text-8xl font-normal tracking-[2.4px] mb-4 text-white max-w-186 mx-auto"
+      >
+        Is Al-Ghazzawi a superhero?
+      </h1>
+      <p class="text-2xl text-white mb-12 font-normal max-w-190 leading-9.75">
+        A cinematic journey through the resilience, humanity, and untold stories
+        of Gaza
+      </p>
+
+      <!-- scroll indicator (replaced simple span with mouse + label) -->
+      <div class="scroll-indicator" aria-hidden="false">
+        <div class="mouse mb-2" role="img" aria-label="Scroll">
+          <span class="mouse-wheel"></span>
+        </div>
+        <span class="scroll-label tracking-wider"> SCROLL TO EXPLORE </span>
+      </div>
+    </div>
+  </section>
+</template>
+
+<script setup>
+import bgImage from "../assets/images/Container.jpg";
+// No props or reactive data needed for this component
+</script>
+
+<style scoped>
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideRight {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+}
+
+/* Scroll indicator styles */
+.scroll-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: #ffffff;
+  user-select: none;
+  margin-top: 8px;
+}
+
+.mouse {
+  width: 36px;
+  height: 56px;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 8px;
+  box-sizing: border-box;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
+  transition: transform 200ms ease, box-shadow 200ms ease;
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+}
+
+.mouse:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+
+.mouse-wheel {
+  width: 4px;
+  height: 10px;
+  background: #ffffff;
+  border-radius: 2px;
+  opacity: 0.95;
+  animation: wheelMove 1.4s infinite cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center;
+}
+
+/* Label under the mouse */
+.scroll-label {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+}
+
+/* wheel animation: move down and fade, loop */
+@keyframes wheelMove {
+  0% {
+    transform: translateY(0);
+    opacity: 0.95;
+  }
+  40% {
+    transform: translateY(8px);
+    opacity: 0.35;
+  }
+  80% {
+    transform: translateY(0);
+    opacity: 0.95;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0.95;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .mouse {
+    width: 28px;
+    height: 46px;
+    border-radius: 16px;
+    padding-top: 7px;
+  }
+  .mouse-wheel {
+    height: 8px;
+    width: 3px;
+  }
+  .scroll-label {
+    font-size: 11px;
+    letter-spacing: 1.6px;
+  }
+}
+</style>
