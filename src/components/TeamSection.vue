@@ -1,5 +1,5 @@
 <template>
-  <section class="relative pt-20 w-full h-full overflow-hidden bg-black">
+  <section class="flex flex-col items-center relative pt-20 w-full h-full overflow-hidden bg-black">
     <div class="relative z-10 max-w-1400 w-[90%] mx-auto px-8 pt-8">
       <!-- Header -->
       <div class="mb-6 max-w-275">
@@ -23,7 +23,7 @@
           rel="noopener noreferrer"
           class="group overflow-hidden rounded-md bg-[rgba(255,255,255,0.02)] border border-[rgba(212,175,55,0.06)] transform transition-all duration-300 will-change-transform hover:-translate-y-2.5 hover:shadow-2xl hover:border-[rgba(212,175,55,0.3)] cursor-pointer no-underline"
         >
-          <div class="relative w-[272px] h-[294px] overflow-hidden mx-auto bg-[#111]">
+          <div class="relative w-[272px] h-[250px] overflow-hidden mx-auto bg-[#111]">
             <img
               :src="member.image"
               :alt="member.name"
