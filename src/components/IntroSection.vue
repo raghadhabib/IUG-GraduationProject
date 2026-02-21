@@ -4,8 +4,29 @@
   >
     <div
       class="absolute inset-0 bg-cover bg-center pointer-events-none"
-      :style="{ backgroundImage: `url(${bgImage})` }"
-    ></div>
+    >
+      <div class="absolute inset-0 z-0">
+        <video
+          ref="videoRef"
+          autoplay
+          muted
+          loop
+          playsinline
+          class="w-full h-full object-cover opacity-50"
+        >
+          <source src="../assets/videos/Version1.mp4" type="video/mp4" />
+        </video>
+        <!-- dark overlay layer on video -->
+        <div class="absolute inset-0 bg-black/30"></div> 
+      </div>
+    </div>
+
+    <!-- Film Frame Image Overlay -->
+    <img
+      src="../assets/images/Vect"
+      alt=""
+      class="absolute inset-0 w-full h-full object-fill z-20 pointer-events-none"
+    />
 
     <div class="relative z-10 text-center animate-[fadeInUp_1.5s_ease-out]">
       <h1
@@ -18,7 +39,7 @@
         of Gaza
       </p>
 
-      <!-- scroll indicator (replaced simple span with mouse + label) -->
+      <!-- scroll indicator -->
       <div class="scroll-indicator" aria-hidden="false">
         <div class="mouse mb-2" role="img" aria-label="Scroll">
           <span class="mouse-wheel"></span>
@@ -30,8 +51,17 @@
 </template>
 
 <script setup>
-import bgImage from "../assets/images/Container.jpg";
-// No props or reactive data needed for this component
+import { ref } from "vue";
+
+const videoRef = ref(null);
+const isMuted = ref(true);
+
+const toggleMute = () => {
+  isMuted.value = !isMuted.value;
+  if (videoRef.value) {
+    videoRef.value.muted = isMuted.value;
+  }
+};
 </script>
 
 <style scoped>
@@ -46,17 +76,6 @@ import bgImage from "../assets/images/Container.jpg";
   }
 }
 
-@keyframes slideRight {
-  0%,
-  100% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(10px);
-  }
-}
-
-/* Scroll indicator styles */
 .scroll-indicator {
   display: flex;
   flex-direction: column;
@@ -98,7 +117,6 @@ import bgImage from "../assets/images/Container.jpg";
   transform-origin: center;
 }
 
-/* Label under the mouse */
 .scroll-label {
   font-size: 12px;
   letter-spacing: 2px;
@@ -106,41 +124,16 @@ import bgImage from "../assets/images/Container.jpg";
   font-weight: 500;
 }
 
-/* wheel animation: move down and fade, loop */
 @keyframes wheelMove {
-  0% {
-    transform: translateY(0);
-    opacity: 0.95;
-  }
-  40% {
-    transform: translateY(8px);
-    opacity: 0.35;
-  }
-  80% {
-    transform: translateY(0);
-    opacity: 0.95;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 0.95;
-  }
+  0%   { transform: translateY(0);   opacity: 0.95; }
+  40%  { transform: translateY(8px); opacity: 0.35; }
+  80%  { transform: translateY(0);   opacity: 0.95; }
+  100% { transform: translateY(0);   opacity: 0.95; }
 }
 
-/* Responsive adjustments */
 @media (max-width: 640px) {
-  .mouse {
-    width: 28px;
-    height: 46px;
-    border-radius: 16px;
-    padding-top: 7px;
-  }
-  .mouse-wheel {
-    height: 8px;
-    width: 3px;
-  }
-  .scroll-label {
-    font-size: 11px;
-    letter-spacing: 1.6px;
-  }
+  .mouse       { width: 28px; height: 46px; border-radius: 16px; padding-top: 7px; }
+  .mouse-wheel { height: 8px; width: 3px; }
+  .scroll-label { font-size: 11px; letter-spacing: 1.6px; }
 }
 </style>
