@@ -42,10 +42,10 @@
         <div class="w-24 h-0.5 bg-linear-to-r from-gold to-transparent mb-8"></div>
         <button
           @click="isExpanded = true"
-          class="relative mt-8 px-10 py-3.5 text-sm tracking-[2px] uppercase bg-transparent border-2 border-gold text-gold transition-all duration-300 overflow-hidden group"
+          class="relative mt-8 px-10 py-3.5 text-sm tracking-[2px] uppercase border-2 bg-gold text-gold transition-all duration-300 overflow-hidden group cursor-pointer"
         >
           <span class="absolute inset-0 bg-gold -translate-x-full group-hover:translate-x-0 transition-transform duration-300 -z-10"></span>
-          <span class="relative group-hover:text-black">Read More</span>
+          <span class="relative text-black">Read More</span>
         </button>
       </div>
 
@@ -53,21 +53,21 @@
       <div class="flex-1 animate-[slideInRight_1s_ease-out]">
         <div class="story-grid w-full flex items-center flex-col gap-3">
           <div class="story-img story-img-large rounded-lg overflow-hidden">
-            <img :src="img1" alt="Scene 1" />
+            <img :src="img1" alt="Scene 1" class="story-photo" />
           </div>
           <div class="story-row mt-4 flex gap-4">
             <div class="story-img flex-1 rounded-lg overflow-hidden">
-              <img :src="img2" alt="Scene 2" />
+              <img :src="img2" alt="Scene 2" class="story-photo" />
             </div>
             <div class="story-img flex-1 rounded-lg overflow-hidden">
-              <img :src="img3" alt="Scene 3" />
+              <img :src="img3" alt="Scene 3" class="story-photo" />
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- EXPANDED layout (Read More clicked) — matches Figma -->
+    <!-- EXPANDED layout -->
     <div
       v-else
       class="relative z-10 w-[90%] max-w-350 px-8 animate-[fadeIn_0.5s_ease-out]"
@@ -78,10 +78,8 @@
         The Story
       </h2>
 
-      <!-- Two-column text + images row -->
       <div class="flex flex-col lg:flex-row gap-8 items-start">
 
-        <!-- Left column: first set of paragraphs -->
         <div class="flex-1 flex flex-col gap-5">
           <p class="text-base leading-relaxed text-white/80 font-normal text-justify">
             In the heart of one of the world's most contested territories,
@@ -101,7 +99,6 @@
           </p>
         </div>
 
-        <!-- Middle column: second set of paragraphs -->
         <div class="flex-1 flex flex-col gap-5">
           <p class="text-base leading-relaxed text-white/80 font-normal text-justify">
             In the heart of one of the world's most contested territories,
@@ -121,32 +118,30 @@
           </p>
         </div>
 
-        <!-- Right column: images stacked -->
         <div class="flex-1 flex flex-col gap-3">
           <div class="rounded-lg overflow-hidden">
-            <img :src="img1" alt="Scene 1" class="w-full h-48 object-cover" />
+            <img :src="img1" alt="Scene 1" class="story-photo w-full h-48 object-cover" />
           </div>
           <div class="flex gap-3">
             <div class="flex-1 rounded-lg overflow-hidden">
-              <img :src="img2" alt="Scene 2" class="w-full h-32 object-cover" />
+              <img :src="img2" alt="Scene 2" class="story-photo w-full h-32 object-cover" />
             </div>
             <div class="flex-1 rounded-lg overflow-hidden">
-              <img :src="img3" alt="Scene 3" class="w-full h-32 object-cover" />
+              <img :src="img3" alt="Scene 3" class="story-photo w-full h-32 object-cover" />
             </div>
           </div>
         </div>
 
       </div>
 
-      <!-- Gold divider + Read Less button -->
       <div class="w-24 h-0.5 bg-linear-to-r from-gold to-transparent mt-8 mb-6 ml-auto"></div>
       <div class="flex justify-end">
         <button
           @click="isExpanded = false"
-          class="relative px-10 py-3.5 text-sm tracking-[2px] uppercase bg-transparent border-2 border-gold text-gold transition-all duration-300 overflow-hidden group"
+          class="relative px-10 py-3.5 text-sm tracking-[2px] uppercase border-2 bg-gold text-gold transition-all duration-300 overflow-hidden group cursor-pointer"
         >
           <span class="absolute inset-0 bg-gold -translate-x-full group-hover:translate-x-0 transition-transform duration-300 -z-10"></span>
-          <span class="relative group-hover:text-black">Read Less</span>
+          <span class="relative text-black">Read Less</span>
         </button>
       </div>
     </div>
@@ -180,10 +175,23 @@ const isExpanded = ref(false);
   to   { opacity: 1; transform: translateX(0); }
 }
 
+/* Grayscale hover effect */
+.story-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(0%);
+  transition: filter 0.4s ease;
+}
+
+.story-photo:hover {
+  filter: grayscale(100%);
+}
+
 /* Image grid styles */
 .story-grid { display: block; }
 .story-img { height: 100%; background: rgba(0,0,0,0.04); }
-.story-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
 .story-img-large { height: 320px; }
 
