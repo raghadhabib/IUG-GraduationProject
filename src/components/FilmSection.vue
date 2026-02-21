@@ -1,9 +1,7 @@
 <template>
   <section class="relative w-full h-full overflow-hidden bg-black">
     <div class="absolute inset-0 z-0">
-      <video autoplay muted loop playsinline class="w-full h-full object-cover opacity-50">
-        <source src="../assets/videos/Where Olive Trees Weep Official Trailer (2024) - Science and Nonduality (720p, h264).mp4" type="video/mp4" />
-      </video>
+     <img src="../assets/images/story-bg.png" class="h-full">
       <div class="absolute inset-0 bg-black/40"></div>
     </div>
 
@@ -34,7 +32,7 @@
           allowfullscreen
         ></iframe>
 
-        <!-- <div v-else class="absolute inset-0 flex flex-col items-center justify-center">
+        <div v-else class="absolute inset-0 flex flex-col items-center justify-center">
           <button 
             @click="isPlaying = true"
             class="group relative w-24 h-24 flex items-center justify-center rounded-full border-2 border-gold/60 bg-gold/10 hover:bg-gold/20 transition-all duration-500"
@@ -48,7 +46,7 @@
             <span class="block text-white text-xs tracking-[4px] uppercase mb-1">Click to Watch Trailer</span>
             <span class="block text-white/40 text-[10px] tracking-[2px] uppercase">Full documentary available soon</span>
           </div>
-        </div> -->
+        </div> 
       </div>
     </div>
   </section>
