@@ -17,7 +17,7 @@
           <source src="../assets/videos/Version1.mp4" type="video/mp4" />
         </video>
         <!-- dark overlay layer on video -->
-        <div class="absolute inset-0 bg-black/30"></div> 
+        <div class="absolute inset-0 bg-black/20"></div> 
       </div>
     </div>
 
@@ -30,11 +30,11 @@
 
     <div class="relative z-10 text-center animate-[fadeInUp_1.5s_ease-out]">
       <h1
-        class="text-8xl font-normal tracking-[2.4px] mb-4 text-white max-w-186 mx-auto"
+        class="text-4xl sm:text-8xl font-normal tracking-[2.4px] mb-4 text-white max-w-186 mx-auto"
       >
         Is Al-Ghazzawi a superhero?
       </h1>
-      <p class="text-2xl text-white mb-12 font-normal max-w-190 leading-9.75">
+      <p class="text-base sm:text-2xl text-white mb-12 font-normal max-w-190 leading-9.75">
         A cinematic journey through the resilience, humanity, and untold stories
         of Gaza
       </p>

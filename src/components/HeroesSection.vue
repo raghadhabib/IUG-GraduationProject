@@ -112,7 +112,7 @@
 
           <div class="relative w-full h-[65vh] overflow-hidden">
             <img
-              :src="detailHero.landscapeImage || detailHero.image"
+              src="../assets/images/heroDetails.png"
               :alt="detailHero.name"
               class="w-full h-full object-cover object-center"
             />
@@ -120,23 +120,13 @@
             <div class="vignette"></div>
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
             <div class="absolute bottom-0 left-0 right-0 pb-8 px-8 text-center text-white">
-              <h3 class="text-4xl font-light mb-3">{{ detailHero.name }}</h3>
-              <p class="text-white/80 italic text-base max-w-2xl mx-auto">{{ detailHero.quote }}</p>
+              <h3 class="text-4xl sm:text-8xl font-light mb-3"> +2.51 million Ghazzawi</h3>
+              <p class="text-base sm:text-2xl  text-white/80 italic max-w-2xl mx-auto">From all the people of Gaza — of all ages, circumstances, and conditions — what was shown is just a glimpse, a single example.</p>
             </div>
           </div>
         </div>
 
-        <div class="mt-8 flex justify-start">
-          <button
-            @click="closeDetail"
-            class="flex items-center gap-3 px-8 py-3 text-sm tracking-[2px] uppercase
-                   bg-transparent border-2 border-yellow-600 text-yellow-600
-                   hover:bg-yellow-600 hover:text-black transition-all duration-300"
-          >
-            <span class="text-xl leading-none">‹</span>
-            <span>Back to Heroes</span>
-          </button>
-        </div>
+      
 
       </div>
 
