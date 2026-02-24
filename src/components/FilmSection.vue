@@ -5,13 +5,7 @@
       <div class="absolute inset-0 bg-black/40"></div>
     </div>
 
-    <button 
-      @click="shareLink"
-      class="absolute top-10 right-10 z-30 flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 rounded-full text-white text-xs tracking-widest transition-all uppercase"
-    >
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
-      SHARE
-    </button>
+    
 
     <div class="relative z-10 w-full h-full flex flex-col items-center justify-center px-8">
       <!-- <h2 class="text-6xl md:text-7xl font-serif text-white mb-2 tracking-tight">
@@ -43,8 +37,8 @@
           </button>
           
           <div class="mt-6 text-center">
-            <span class="block text-white text-xs tracking-[4px] uppercase mb-1">Click to Watch Trailer</span>
-            <span class="block text-white/40 text-[10px] tracking-[2px] uppercase">Full documentary available soon</span>
+            <span class="block text-white text-xs tracking-[4px] uppercase mb-1">Click to Watch Film</span>
+            <span class="block text-white/40 text-[10px] tracking-[2px] uppercase">Full documentary available now </span>
           </div>
         </div> 
       </div>

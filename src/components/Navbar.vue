@@ -15,10 +15,10 @@
             <a
               @click.prevent="scrollToSection(item.id)"
               href="#"
-              class="transition-all duration-300 cursor-pointer"
+              class="transition-all duration-300 cursor-pointer bg-black backdrop-blur-sm"
               style="font-family: 'IBM Plex Sans', sans-serif; font-size: 13px; font-weight: 400;"
               :style="activeSection === item.id ? { color: item.color } : {}"
-              :class="activeSection === item.id ? '' : 'text-gray-300 hover:text-white'"
+              :class="activeSection === item.id ? '' : 'text-gray-300'"
             >
               {{ item.name }}
             </a>
@@ -45,15 +45,15 @@
 
         <!-- Mobile Menu Overlay -->
         <div
-          class="fixed inset-0 bg-black/95 backdrop-blur-xl z-40 transition-transform duration-300 md:hidden flex flex-col items-center justify-center"
+          class="fixed inset-0 bg-gray-900/95 backdrop-blur-xl z-40 transition-transform duration-300 md:hidden flex flex-col items-center justify-center"
           :class="isMenuOpen ? 'translate-x-0' : 'translate-x-full'"
         >
-          <ul class="flex flex-col gap-8 text-center">
+          <ul class="flex flex-col gap-8 text-center bg-black/80 backdrop-blur-sm rounded-xl w-full h-10">
             <li v-for="item in navItems" :key="item.id">
               <a
                 @click.prevent="scrollToSection(item.id)"
                 href="#"
-                class="text-xl font-medium tracking-[2px] uppercase transition-all duration-300 cursor-pointer block py-2"
+                class="text-xl font-medium tracking-[2px] uppercase transition-all duration-300 cursor-pointer block py-2 "
                 :style="activeSection === item.id ? { color: item.color } : {}"
                 :class="activeSection === item.id ? '' : 'text-gray-300 hover:text-white'"
               >
