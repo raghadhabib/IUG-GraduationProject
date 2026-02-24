@@ -22,11 +22,11 @@
     </div>
 
     <!-- Film Frame Image Overlay -->
-    <img
+    <!-- <img
       src="../assets/images/Vect"
       alt=""
       class="absolute inset-0 w-full h-full object-fill z-20 pointer-events-none"
-    />
+    /> -->
 
     <div class="relative z-10 text-center animate-[fadeInUp_1.5s_ease-out]">
       <h1
