@@ -119,7 +119,7 @@
             <!-- Vignette overlay on detail view -->
             <div class="vignette"></div>
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
-            <div class="absolute bottom-0 left-0 right-0 pb-8 px-8 text-center text-white">
+            <div class="absolute bottom-0 left-0 right-0 pb-8 px-8 text-start text-white">
               <h3 class="text-4xl sm:text-8xl font-light mb-3"> +2.51 million Ghazzawi</h3>
               <p class="text-base sm:text-2xl  text-white/80 italic max-w-2xl mx-auto">From all the people of Gaza — of all ages, circumstances, and conditions — what was shown is just a glimpse, a single example.</p>
             </div>
@@ -139,8 +139,7 @@ import { ref, computed } from "vue";
 import imgA from "../assets/images/hifa.png";
 import imgB from "../assets/images/yousf.png";
 import rightBg from "../assets/images/Hajj_Ibrahim.PNG";
-import landscapeA from "../assets/images/heroes-section1.jpg";
-import landscapeB from "../assets/images/heroes-section2.jpg";
+
 
 const slidesData = ref([
   [
@@ -149,7 +148,7 @@ const slidesData = ref([
       role: "Aspiring Football Player",
       quote: '"When I kick the ball, I forget everything. Football is my freedom."',
       image: imgB,
-      landscapeImage: landscapeB,
+      
       description:
         "Despite the challenges, Youssef dreams of becoming a professional football player, finding joy and freedom on the field.",
     },
@@ -158,7 +157,7 @@ const slidesData = ref([
       role: "Medical Student & Artist",
       quote: '"Even in darkness, we paint our dreams on the walls of tomorrow."',
       image: imgA,
-      landscapeImage: landscapeA,
+      
       description:
         "A keeper of memories and traditions, Nour Al-Masri combines her medical studies with artistic expression to document the resilience of Gaza.",
     },
@@ -167,7 +166,7 @@ const slidesData = ref([
       role: "Storyteller & Community Elder",
       quote: '"I have witnessed many wars, but I refuse to let war define who we are."',
       image: rightBg,
-      landscapeImage: landscapeA,
+      
       description:
         "A keeper of memories and traditions, Hajj Ibrahim gathers children under olive trees to share stories of Palestine's rich history and teaches younger generations that their identity is rooted in culture, not conflict.",
     },

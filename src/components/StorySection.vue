@@ -42,7 +42,7 @@
         <div class="w-24 h-0.5 bg-linear-to-r from-gold to-transparent mb-8"></div>
         <button
           @click="isExpanded = true"
-          class="relative mt-8 px-10 py-3.5 text-sm tracking-[2px] uppercase border-2 bg-gold text-gold transition-all duration-300 overflow-hidden group cursor-pointer"
+          class="relative mt-8 px-10 py-3.5 text-sm tracking-[2px] uppercase border-2  bg-gold text-gold transition-all duration-300 overflow-hidden group cursor-pointer"
         >
           <span class="absolute inset-0 bg-gold -translate-x-full group-hover:translate-x-0 transition-transform duration-300 -z-10"></span>
           <span class="relative text-black">Read More</span>
@@ -52,14 +52,14 @@
       <!-- Image Content -->
       <div class="flex-1 animate-[slideInRight_1s_ease-out]">
         <div class="story-grid w-full flex items-center flex-col gap-3">
-          <div class="story-img story-img-large rounded-lg overflow-hidden">
+          <div class="story-img story-img-large  overflow-hidden">
             <img :src="img1" alt="Scene 1" class="story-photo" />
           </div>
           <div class="story-row mt-4 flex gap-4">
-            <div class="story-img flex-1 rounded-lg overflow-hidden">
+            <div class="story-img flex-1  overflow-hidden">
               <img :src="img2" alt="Scene 2" class="story-photo" />
             </div>
-            <div class="story-img flex-1 rounded-lg overflow-hidden">
+            <div class="story-img flex-1  overflow-hidden">
               <img :src="img3" alt="Scene 3" class="story-photo" />
             </div>
           </div>
@@ -119,14 +119,14 @@
         </div>
 
         <div class="flex-1 flex flex-col gap-3">
-          <div class="rounded-lg overflow-hidden">
+          <div class=" overflow-hidden">
             <img :src="img1" alt="Scene 1" class="story-photo w-full h-48 object-cover" />
           </div>
           <div class="flex gap-3">
-            <div class="flex-1 rounded-lg overflow-hidden">
+            <div class="flex-1  overflow-hidden">
               <img :src="img2" alt="Scene 2" class="story-photo w-full h-32 object-cover" />
             </div>
-            <div class="flex-1 rounded-lg overflow-hidden">
+            <div class="flex-1  overflow-hidden">
               <img :src="img3" alt="Scene 3" class="story-photo w-full h-32 object-cover" />
             </div>
           </div>
@@ -152,9 +152,9 @@
 <script setup>
 import { ref } from "vue";
 import storyBg from "../assets/images/story-bg.png";
-import img1 from "../assets/images/store-section1.jpg";
+import img1 from "../assets/images/storyPic2.JPG";
 import img2 from "../assets/images/story-section2.jpg";
-import img3 from "../assets/images/story-section3.jpg";
+import img3 from "../assets/images/storyPic1.JPG";
 
 const isExpanded = ref(false);
 </script>

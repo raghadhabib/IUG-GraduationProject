@@ -14,10 +14,12 @@
           playsinline
           class="w-full h-full object-cover opacity-50"
         >
-          <source src="../assets/videos/version2.mp4" type="video/mp4" />
+         <source src="../assets/videos/version2.webm" type="video/webm">
+         
+          
         </video>
         <!-- dark overlay layer on video -->
-        <div class="absolute inset-0 bg-black/60"></div> 
+        <div class="absolute inset-0 bg-black/40"></div> 
       </div>
     </div>
 
