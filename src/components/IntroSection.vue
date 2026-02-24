@@ -17,7 +17,7 @@
           <source src="../assets/videos/version2.mp4" type="video/mp4" />
         </video>
         <!-- dark overlay layer on video -->
-        <div class="absolute inset-0 bg-black/40"></div> 
+        <div class="absolute inset-0 bg-black/60"></div> 
       </div>
     </div>
 
