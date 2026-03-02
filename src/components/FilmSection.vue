@@ -1,20 +1,15 @@
 <template>
   <section class="relative w-full h-full overflow-hidden bg-black">
-    <div class="absolute inset-0 z-0">
-     <img src="../assets/images/story-bg.png" class="h-full">
-      <div class="absolute inset-0 bg-black/40"></div>
-    </div>
+  <div 
+    class="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
+    :style="{ backgroundImage: `url(${filmBg})` }"
+  >
+    <div class="absolute inset-0 bg-black/40"></div>
+  </div>
 
     
 
     <div class="relative z-10 w-full h-full flex flex-col items-center justify-center px-8">
-      <!-- <h2 class="text-6xl md:text-7xl font-serif text-white mb-2 tracking-tight">
-        Is Al-Ghazzawi a superhero?
-      </h2>
-      <p class="text-white/70 text-sm tracking-[3px] mb-12 uppercase">
-        Experience the complete journey. Watch the stories unfold.
-      </p> -->
-
       <div class="relative w-full max-w-[1000px] aspect-video group">
         
         <iframe
@@ -48,6 +43,7 @@
 
 <script setup>
 import { ref } from 'vue';
+import filmBg from '../assets/images/story-bg.png'
 
 const isPlaying = ref(false);
 

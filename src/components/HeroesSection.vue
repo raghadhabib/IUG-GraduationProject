@@ -1,6 +1,6 @@
 <template>
   <section
-    class="relative pt-20 w-full h-full flex justify-center overflow-hidden bg-black"
+    class="relative pt-20 w-full h-full flex justify-center  overflow-hidden bg-black"
     :class="detailView ? 'items-start' : 'items-center'"
   >
     <div class="relative z-10 max-w-350 w-[90%] px-8  mx-auto"
@@ -58,17 +58,7 @@
           </div>
         </div>
 
-        <!-- Gold NEXT arrow -->
-        <button
-          class="hidden md:flex absolute top-1/2 -right-7 transform -translate-y-1/2 z-20
-                 bg-yellow-600 hover:bg-yellow-500 text-black w-14 h-14 rounded-full text-2xl
-                 cursor-pointer items-center justify-center transition-all duration-300
-                 hover:scale-110"
-          @click="openDetail"
-          aria-label="View more"
-        >
-          ›
-        </button>
+        
 
         <!-- Mobile list -->
         <div class="md:hidden flex flex-col gap-8 mt-8">
@@ -91,44 +81,52 @@
           </div>
         </div>
 
+              <!-- See More button - top right -->
+        <div class="flex justify-end mb-4">
+          <button
+            @click="openDetail"
+            class="relative px-10 py-3.5 text-sm tracking-[2px] uppercase border-2 border-gold bg-gold text-white transition-all duration-300 overflow-hidden group cursor-pointer"
+          >
+            <span class="absolute inset-0 bg-gold -translate-x-full group-hover:translate-x-0 transition-transform duration-300 -z-10"></span>
+            <span class="relative transition-colors duration-300">VIEW MORE</span>
+          </button>
+        </div>
+
       </div>
 
       <!-- ─── DETAIL / FULL-WIDTH VIEW ─── -->
       <div v-else class="mt-8 animate-[fadeIn_0.6s_ease-out]">
 
-        <div class="relative w-full rounded-sm" style="overflow: visible;">
+  <div class="relative w-full rounded-sm " style="overflow: visible;">
 
-          <button
-            @click="closeDetail"
-            class="absolute top-1/2 -left-7 -translate-y-1/2 flex items-center justify-center
-                   w-14 h-14 rounded-full bg-yellow-600 hover:bg-yellow-500
-                   text-black text-2xl transition-all duration-300
-                   hover:scale-110"
-            style="z-index: 50;"
-            aria-label="Back to heroes"
-          >
-            ‹
-          </button>
+   
+    <div class="relative w-full h-[65vh] overflow-hidden">
+  <img
+    src="../assets/images/heroDetails.png"
+    :alt="detailHero.name"
+    class="w-full h-full object-cover object-center"
+  />
+  <div class="vignette"></div>
+  <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
+  <div class="absolute bottom-0 left-0 right-0 pb-8 px-8 text-start text-white">
+    <h3 class="text-5xl lg:text-6xl md:text-4xl font-light mb-3">+2.51 Million Ghazzawi</h3>
+    <p class="text-base sm:text-2xl text-white/80 italic text-start">From all the people of Gaza — of all ages, circumstances, and conditions — what was shown is just a glimpse, a single example.</p>
+  </div>
+</div>
 
-          <div class="relative w-full h-[65vh] overflow-hidden">
-            <img
-              src="../assets/images/heroDetails.png"
-              :alt="detailHero.name"
-              class="w-full h-full object-cover object-center"
-            />
-            <!-- Vignette overlay on detail view -->
-            <div class="vignette"></div>
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
-            <div class="absolute bottom-0 left-0 right-0 pb-8 px-8 text-start text-white">
-              <h3 class="text-6xl lg:text-6xl md:text-4xl font-light mb-3"> +2.51 Million Ghazzawi</h3>
-              <p class="text-base sm:text-2xl  text-white/80 italic  text-start">From all the people of Gaza — of all ages, circumstances, and conditions — what was shown is just a glimpse, a single example.</p>
-            </div>
-          </div>
-        </div>
+<!-- See Less button - bottom right -->
+<div class="flex justify-end">
+  <button
+    @click="closeDetail"
+    class="relative px-10 py-3.5 text-sm tracking-[2px] uppercase border-2 border-gold bg-gold text-white transition-all duration-300 overflow-hidden group cursor-pointer"
+  >
+    <span class="absolute inset-0 bg-gold -translate-x-full group-hover:translate-x-0 transition-transform duration-300 -z-10"></span>
+    <span class="relative">BACK TO HEROES</span>
+  </button>
+</div>
+  </div>
 
-      
-
-      </div>
+</div>
 
     </div>
   </section>

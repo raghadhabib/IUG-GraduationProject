@@ -1,5 +1,5 @@
 <template>
-  <section class="flex flex-col items-center relative pt-20 w-full h-full overflow-hidden bg-black">
+  <section class="flex flex-col items-center justify-center relative pt-20 w-full h-full overflow-hidden bg-black">
     <div class="relative z-10 max-w-1400 w-[90%] mx-auto px-8 pt-8">
       <!-- Header -->
       <div class="mb-6 max-w-275">

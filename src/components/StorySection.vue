@@ -45,7 +45,7 @@
           class="relative mt-8 px-10 py-3.5 text-sm tracking-[2px] uppercase border-2  bg-gold text-gold transition-all duration-300 overflow-hidden group cursor-pointer"
         >
           <span class="absolute inset-0 bg-gold -translate-x-full group-hover:translate-x-0 transition-transform duration-300 -z-10"></span>
-          <span class="relative text-black">Read More</span>
+          <span class="relative text-white">Read More</span>
         </button>
       </div>
 
@@ -141,7 +141,7 @@
           class="relative px-10 py-3.5 text-sm tracking-[2px] uppercase border-2 bg-gold text-gold transition-all duration-300 overflow-hidden group cursor-pointer"
         >
           <span class="absolute inset-0 bg-gold -translate-x-full group-hover:translate-x-0 transition-transform duration-300 -z-10"></span>
-          <span class="relative text-black">Read Less</span>
+          <span class="relative text-white">Read Less</span>
         </button>
       </div>
     </div>
