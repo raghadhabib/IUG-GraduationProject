@@ -45,23 +45,34 @@
 
         <!-- Mobile Menu Overlay -->
         <div
-          class="fixed inset-0 bg-gray-900/95 backdrop-blur-xl z-40 transition-transform duration-300 md:hidden flex flex-col items-center justify-center"
-          :class="isMenuOpen ? 'translate-x-0' : 'translate-x-full'"
-        >
-          <ul class="flex flex-col gap-8 text-center bg-black/80 backdrop-blur-sm rounded-xl w-full h-10">
-            <li v-for="item in navItems" :key="item.id">
-              <a
-                @click.prevent="scrollToSection(item.id)"
-                href="#"
-                class="text-xl font-medium tracking-[2px] uppercase transition-all duration-300 cursor-pointer block py-2 "
-                :style="activeSection === item.id ? { color: item.color } : {}"
-                :class="activeSection === item.id ? '' : 'text-gray-300 hover:text-white'"
-              >
-                {{ item.name }}
-              </a>
-            </li>
-          </ul>
-        </div>
+  v-if="isMenuOpen"
+  class="fixed top-0 left-0 w-screen md:hidden flex flex-col items-center"
+  style="background-color: rgba(0,0,0,0.9); backdrop-filter: blur(10px); z-index: 999;"
+>
+  <!-- Close button -->
+  <button
+    @click="toggleMenu"
+    class="self-end px-6 py-5 text-white text-2xl"
+    aria-label="Close menu"
+  >
+    ✕
+  </button>
+
+  <ul class="flex flex-col gap-6 w-full px-8 pb-8 text-center">
+    <li v-for="item in navItems" :key="item.id">
+      <a
+      
+        @click.prevent="scrollToSection(item.id)"
+        href="#"
+        class="text-lg font-medium tracking-[2px] uppercase transition-all duration-300 cursor-pointer block py-2"
+        :style="activeSection === item.id ? { color: item.color } : {}"
+        :class="activeSection === item.id ? '' : 'text-gray-300 hover:text-white'"
+      >
+        {{ item.name }}
+      </a>
+    </li>
+  </ul>
+</div>
       </div>
     </div>
 
