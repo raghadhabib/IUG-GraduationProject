@@ -152,9 +152,9 @@
 <script setup>
 import { ref } from "vue";
 import storyBg from "../assets/images/story-bg.png";
-import img1 from "../assets/images/storyPic2.JPG";
-import img2 from "../assets/images/story-section2.jpg";
-import img3 from "../assets/images/storyPic1.JPG";
+import img1 from "../assets/images/sea.png";
+import img2 from "../assets/images/bird.jpeg";
+import img3 from "../assets/images/flowerWithBuilding.jpeg";
 
 const isExpanded = ref(false);
 </script>
