@@ -78,7 +78,7 @@ const team = [
   },
   {
     name: "Afnan Al Ashqar",
-    role: "Photographer",
+    role: "Film maker",
     bio: "Documentary photographer capturing authentic moments and powerful human stories. Specialized in portraiture and narrative photography.",
     image: imgC,
     linkedinUrl: "https://www.linkedin.com/in/afnan-ashqar-5591b7239/",
