@@ -27,7 +27,7 @@
             <img
               :src="member.image"
               :alt="member.name"
-              class="w-full h-full object-cover block transition-transform duration-300 ease-in-out origin-center group-hover:scale-105"
+              class="w-full h-[285px] object-cover block transition-transform duration-300 ease-in-out origin-center group-hover:scale-105"
             />
             <div
               class="absolute inset-0 bg-gradient-to-b from-transparent via-black/30 to-black/75 pointer-events-none"
@@ -56,7 +56,7 @@
 </template>
 
 <script setup>
-import imgA from "../assets/images/Menna.png";
+import imgA from "../assets/images/mennaPic.jpeg";
 import imgB from "../assets/images/Raghad.png";
 import imgC from "../assets/images/Afnaan.png";
 import imgD from "../assets/images/shahed.png";
