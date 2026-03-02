@@ -30,7 +30,7 @@
       >
         Is Al-Ghazzawi a superhero?
       </h1>
-      <p class="text-base sm:text-2xl text-white mb-12 font-normal max-w-190 leading-9.75">
+      <p class="text-base sm:text-2xl text-white mb-12 font-normal max-w-190 leading-9.75 px-6 sm:px-0">
         A cinematic journey through the resilience, humanity, and untold stories
         of Gaza
       </p>
