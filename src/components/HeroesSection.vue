@@ -85,7 +85,7 @@
               <div class="absolute bottom-0 left-0 right-0 p-6">
                 <p class="text-yellow-600 text-xs uppercase tracking-wider mb-2 font-medium">{{ hero.role }}</p>
                 <h3 class="text-3xl font-light text-white mb-2">{{ hero.name }}</h3>
-                <p class="text-white/80 italic text-sm leading-relaxed">{{ hero.quote }}</p>
+                <p class="text-white/90 italic text-sm leading-relaxed">{{ hero.quote }}</p>
               </div>
             </div>
           </div>
@@ -120,8 +120,8 @@
             <div class="vignette"></div>
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
             <div class="absolute bottom-0 left-0 right-0 pb-8 px-8 text-start text-white">
-              <h3 class="text-4xl sm:text-8xl font-light mb-3"> +2.51 million Ghazzawi</h3>
-              <p class="text-base sm:text-2xl  text-white/80 italic max-w-2xl mx-auto">From all the people of Gaza — of all ages, circumstances, and conditions — what was shown is just a glimpse, a single example.</p>
+              <h3 class="text-6xl lg:text-6xl md:text-4xl font-light mb-3"> +2.51 Million Ghazzawi</h3>
+              <p class="text-base sm:text-2xl  text-white/80 italic  text-start">From all the people of Gaza — of all ages, circumstances, and conditions — what was shown is just a glimpse, a single example.</p>
             </div>
           </div>
         </div>
