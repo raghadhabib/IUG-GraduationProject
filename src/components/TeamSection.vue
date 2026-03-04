@@ -77,7 +77,7 @@ const team = [
     linkedinUrl: "https://www.linkedin.com/in/raghadhabib/",
   },
   {
-    name: "Afnan Al Ashqar",
+    name: "Afnan Al-ahqar",
     role: "Film maker",
     bio: "Documentary photographer capturing authentic moments and powerful human stories. Specialized in portraiture and narrative photography.",
     image: imgC,

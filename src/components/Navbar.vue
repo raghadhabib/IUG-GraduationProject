@@ -52,13 +52,13 @@
   <!-- Close button -->
   <button
     @click="toggleMenu"
-    class="self-end px-6 py-5 text-white text-2xl"
+    class="self-end px-6 py-4 text-white text-2xl"
     aria-label="Close menu"
   >
     ✕
   </button>
 
-  <ul class="flex flex-col gap-6 w-full px-8 pb-8 text-center">
+  <ul class="flex flex-col gap-6 w-full px-8 py-5 text-center">
     <li v-for="item in navItems" :key="item.id">
       <a
       
