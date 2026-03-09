@@ -19,6 +19,7 @@
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
+          
         ></iframe>
 
         <div v-else class="absolute inset-0 flex flex-col items-center justify-center">
