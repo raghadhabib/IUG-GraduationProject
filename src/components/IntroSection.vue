@@ -13,8 +13,9 @@
           loop
           playsinline
           class="w-full h-full object-cover opacity-50"
+          poster="../assets/images/bird.jpeg"
         >
-         <source src="../assets/videos/finalVersion.webm" type="video/webm">
+         <source src="../assets/videos/finalVersion.webm" type="video/webm" >
         </video>
         <div class="absolute inset-0 bg-black/40"></div> 
       </div>

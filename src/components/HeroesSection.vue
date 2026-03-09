@@ -151,7 +151,7 @@ const slidesData = ref([
       description: "A black-belt athlete and four-time national champion. After qualifying for the national team just before the conflict, Youssef continued training in open fields and displacement camps. He maintains his athletic discipline despite the loss of all professional facilities.",
     },
     {
-      name: "Hifaa hassn, 22",
+      name: "Hifaa Bassam, 22",
       role: "Cellist & UX/UI Designer",
       quote: '"On this earth, we are truly the ones who deserve life."',
       image: imgA,
