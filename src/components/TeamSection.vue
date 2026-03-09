@@ -14,7 +14,7 @@
       </div>
 
       <!-- Team grid -->
-      <div class="team-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 ">
+      <div class="team-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
         <a
           v-for="(member, idx) in team"
           :key="idx"
@@ -33,8 +33,6 @@
               class="absolute inset-0 bg-gradient-to-b from-transparent via-black/30 to-black/75 pointer-events-none"
             ></div>
 
-            <!-- LinkedIn icon shown on hover -->
-          
             <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/80">
               <div class="bg-black border-2 border-black rounded-md p-2">
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white">
@@ -49,20 +47,21 @@
             <div class="text-[#d4af37] text-sm tracking-[0.6px] mb-2">{{ member.role }}</div>
             <p class="text-white/75 text-sm leading-6">{{ member.bio }}</p>
           </div>
-          
         </a>
-        <div class="mx-4 flex items-center justify-center text-center bg-gold border-2 border-black rounded-md p-2">
-        <p class="text-white/65 text-base max-w-[900px] text-center">
-         made by Raghad Habib &copy; All rights reserved.
-        </p>
       </div>
+
+      <!-- Copyright footer -->
+      <div class="w-full mt-5 mb-4 py-5 border-t border-white/10 flex items-center justify-center">
+        <p class="text-white/50 text-xs tracking-[2px] uppercase text-center">
+          Made by Raghad Habib &nbsp;&mdash;&nbsp; &copy; {{ new Date().getFullYear() }} All rights reserved.
+        </p>
       </div>
     </div>
   </section>
 </template>
 
 <script setup>
-import imgA from "../assets/images/mennaPic.jpeg";
+import imgA from "../assets/images/mennaGrad2.png";
 import imgB from "../assets/images/Raghad.png";
 import imgC from "../assets/images/Afnaan.png";
 import imgD from "../assets/images/shahed.png";
