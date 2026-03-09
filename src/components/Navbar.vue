@@ -32,7 +32,7 @@
 
         <!-- Mobile Hamburger -->
         <button
-          class="md:hidden text-white focus:outline-none z-50"
+          class="cursor-pointer md:hidden text-white focus:outline-none z-50"
           @click="toggleMenu"
           aria-label="Toggle menu"
         >
@@ -52,7 +52,7 @@
   <!-- Close button -->
   <button
     @click="toggleMenu"
-    class="self-end px-6 py-4 text-white text-2xl"
+    class="cursor-pointer self-end px-6 py-4 text-white text-2xl"
     aria-label="Close menu"
   >
     ✕

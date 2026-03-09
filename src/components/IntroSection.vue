@@ -13,7 +13,7 @@
           loop
           playsinline
           class="w-full h-full object-cover opacity-50"
-          poster="../assets/images/bird.jpeg"
+          
         >
          <source src="../assets/videos/finalVersion.webm" type="video/webm">
          
@@ -27,14 +27,15 @@
 
     <div class="relative z-10 text-center animate-[fadeInUp_1.5s_ease-out]">
       <h1
-        class="text-4xl sm:text-8xl font-normal tracking-[2.4px] mb-4 text-white max-w-186 mx-auto"
+        class="text-4xl sm:text-8xl font-normal tracking-[2.4px] mb-8 text-white max-w-186 mx-auto"
       >
         Is Al-Ghazzawi a superhero?
       </h1>
-      <p class="text-base sm:text-2xl text-white mb-12 font-normal max-w-190 leading-9.75 px-6 sm:px-0">
+      <p class="text-base sm:text-2xl text-white mb-8 font-normal max-w-190 leading-9.75 px-6 sm:px-0">
         A cinematic journey through the resilience, humanity, and untold stories
         of Gaza
       </p>
+      <p class="text-xs sm:text-xl text-white/80 mb-8 font-normal max-w-190 leading-9.75 px-6 sm:px-0">Real .Documentary .Short film</p>
 
       <!-- scroll indicator -->
       <div class="scroll-indicator" aria-hidden="false">

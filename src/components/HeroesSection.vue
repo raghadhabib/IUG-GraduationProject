@@ -10,8 +10,7 @@
         The Heroes
       </h2>
       <p class="text-xl md:text-lg text-white/70 mb-2 font-normal max-w-165">
-        Meet the extraordinary individuals whose courage and resilience
-        illuminate the true spirit of Gaza.
+        Meet the extraordinary individuals whose courage and resilience illuminate the true spirit of Gaza.
       </p>
 
       <!-- ─── CARD GRID VIEW ─── -->
@@ -142,31 +141,31 @@ import rightBg from "../assets/images/Hajj_Ibrahim.PNG";
 const slidesData = ref([
   [
     {
-      name: "Youssef, 14",
-      role: "Aspiring Football Player",
-      quote: '"When I kick the ball, I forget everything. Football is my freedom."',
+      name: "Yosuf hassn, 15",
+      role: "Karate Player",
+      quote: '" I love karate, and my soul is deeply connected to it. All my sorrow for Gaza, I used to release through karate. "',
       image: imgB,
       
       description:
-        "Despite the challenges, Youssef dreams of becoming a professional football player, finding joy and freedom on the field.",
+        "A black-belt athlete and four-time national champion. After qualifying for the national team just before the conflict, Youssef continued training in open fields and displacement camps. He maintains his athletic discipline despite the loss of all professional facilities.",
     },
     {
       name: "Hifaa hassn, 22",
-      role: "Medical Student & Artist",
-      quote: '"Even in darkness, we paint our dreams on the walls of tomorrow."',
+      role: "Cellist & UX/UI Designer",
+      quote: '"On this earth, we are truly the ones who deserve life."',
       image: imgA,
       
       description:
-        "A keeper of memories and traditions, Nour Al-Masri combines her medical studies with artistic expression to document the resilience of Gaza.",
+        "An IT Engineering graduate and professional cellist. After recovering her instrument from her damaged home, Haifaa resumed playing as a form of cultural resilience. She balances her career as a digital designer with her commitment to music.",
     },
     {
-      name: "Hajj Ibrahim, 72",
-      role: "Storyteller & Community Elder",
-      quote: '"I have witnessed many wars, but I refuse to let war define who we are."',
+      name: "Kamal Al-Hajj, 73",
+      role: "Religious scholar & calligrapher",
+      quote: '"I love life, I love Gaza; I feel it is a great opportunity for more good deeds and greater happiness in the hereafter."',
       image: rightBg,
       
       description:
-        "A keeper of memories and traditions, Hajj Ibrahim gathers children under olive trees to share stories of Palestine's rich history and teaches younger generations that their identity is rooted in culture, not conflict.",
+        "A religious man, calligrapher, and artist who lost his home and son in the war. Despite the pain, he remains reflective and hopeful, viewing life as a path to good deeds and eternal happiness in the afterlife.",
     },
   ],
 ]);
