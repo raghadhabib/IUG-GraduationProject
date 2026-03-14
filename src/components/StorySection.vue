@@ -22,13 +22,16 @@
 
         <div class="flex flex-col gap-6 mb-6">
           <p class="text-lg lg:text-base leading-relaxed text-white/80 font-normal text-justify">
-            In the heart of one of the world's most contested territories, ordinary people live extraordinary lives. This documentary peels back the layers of headlines and history to reveal the human spirit that endures against all odds.
+            After the crises that Gaza witnessed during the recent war, people from Gaza have come to be seen as superheroes.
+But in reality, do they see themselves that way?
+
+This film poses this question to three generations: a child, a young woman, and an elderly man, exploring how each of them views themselves and their reality.
           </p>
           <p class="text-lg lg:text-base leading-relaxed text-white/80 font-normal text-justify">
-            From artists painting murals on rubble to children finding joy in the smallest moments, this is a testament to the indomitable will of humanity.
+            The work documents part of the experience lived by people in Gaza and examines how challenge, hope, and faith can coexist at the same time.
           </p>
           <p class="text-lg lg:text-base leading-relaxed text-white/80 font-normal text-justify">
-            Through intimate portraits and powerful testimonies, we witness stories of courage, creativity, and hope—a Gaza rarely seen, yet desperately needed to be told.
+           A human journey that moves closer to the truth as seen through the eyes of those who lived it.
           </p>
         </div>
 
