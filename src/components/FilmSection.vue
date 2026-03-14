@@ -25,7 +25,7 @@
         <div v-else class="absolute inset-0 flex flex-col items-center justify-center">
           <button 
             @click="isPlaying = true"
-            class="group relative w-28 h-28 flex items-center justify-center rounded-full border-2 border-white bg-white hover:bg-white/20 transition-all duration-500"
+            class="group relative w-20 h-20 flex items-center justify-center rounded-full border-2 border-white bg-white hover:bg-white/20 transition-all duration-500"
           >
             <div class="w-0 h-0 border-t-[18px] border-t-transparent border-l-[30px] border-l-[#FF5524] border-b-[18px] border-b-transparent ml-2"></div>
             
@@ -33,8 +33,8 @@
           </button>
           
           <div class="mt-6 text-center">
-            <span class="block text-white text-xs tracking-[4px] uppercase mb-1">Click to Watch Film</span>
-            <span class="block text-white/40 text-[10px] tracking-[2px] uppercase">Full documentary available now </span>
+            <span class="block text-white text-lg tracking-[4px]  mb-1">Click To Watch Film</span>
+            
           </div>
         </div> 
       </div>
