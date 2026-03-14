@@ -4,7 +4,7 @@
     class="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat object-contain"
     :style="{ backgroundImage: `url(${filmBg})` }"
   >
-    <div class="absolute inset-0  bg-black"></div>
+    <div class="absolute inset-0 bg-black/70"></div>
   </div>
 
     
