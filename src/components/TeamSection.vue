@@ -23,7 +23,7 @@
           rel="noopener noreferrer"
           class="group overflow-hidden rounded-md bg-[rgba(255,255,255,0.02)] border border-[rgba(212,175,55,0.06)] transform transition-all duration-300 will-change-transform hover:-translate-y-2.5 hover:shadow-2xl hover:border-[rgba(212,175,55,0.3)] cursor-pointer no-underline"
         >
-          <div class="relative w-[272px] h-[250px] overflow-hidden mx-auto bg-[#111]">
+          <div class="relative w-[240px] h-[250px] overflow-hidden mx-auto bg-[#111]">
             <img
               :src="member.image"
               :alt="member.name"
@@ -52,8 +52,8 @@
 
       <!-- Copyright footer -->
       <div class="w-full mt-5 mb-4 py-5 border-t border-white/10 flex items-center justify-center">
-        <p class="text-white/50 text-xs tracking-[2px] uppercase text-center">
-          Made by Raghad Habib &nbsp;&mdash;&nbsp; &copy; {{ new Date().getFullYear() }} All rights reserved.
+        <p class="text-white/50 text-xs tracking-[2px] text-center">
+          &nbsp; &copy; {{ new Date().getFullYear() }} All Rights Reserved.
         </p>
       </div>
     </div>
@@ -62,8 +62,8 @@
 
 <script setup>
 import imgA from "../assets/images/mennaGrad2.png";
-import imgB from "../assets/images/Raghad.png";
-import imgC from "../assets/images/Afnaan.png";
+import imgB from "../assets/images/Raghad Grad.png";
+import imgC from "../assets/images/AfnanGrad.png";
 import imgD from "../assets/images/shahed.png";
 
 const team = [
