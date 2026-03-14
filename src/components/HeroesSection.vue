@@ -9,7 +9,7 @@
       <h2 class="text-6xl lg:text-5xl md:text-4xl font-normal text-white mb-4">
         The Heroes
       </h2>
-      <p class="text-xl md:text-lg text-white/70 mb-2 font-normal max-w-165">
+      <p class="text-xl md:text-lg text-white/70 mb-2 font-normal max-w-200">
         Meet the extraordinary individuals whose courage and resilience illuminate the true spirit of Gaza.
       </p>
 
@@ -21,14 +21,14 @@
           <div
             v-for="(hero, index) in getCurrentSlideHeroes"
             :key="index"
-            class="group relative bg-black overflow-hidden cursor-pointer"
+            class="group relative bg-black overflow-hidden "
           >
             <div class="relative w-full h-[380px] overflow-hidden">
               <img
-                :class="index === 2 ? 'object-cover' : 'object-contain'"
+                
                 :src="hero.image"
                 :alt="hero.name"
-                class="w-full h-full object-top transition-transform duration-500 ease-in-out group-hover:scale-105"
+                class="w-full h-full object-top transition-transform duration-500 ease-in-out group-hover:scale-105 object-cover"
               />
 
               <div class="vignette"></div>
@@ -125,7 +125,7 @@
               class="relative px-10 py-3.5 text-sm tracking-[2px] uppercase border-2 border-gold bg-gold text-white transition-all duration-300 overflow-hidden group cursor-pointer"
             >
               <span class="absolute inset-0 bg-gold -translate-x-full group-hover:translate-x-0 transition-transform duration-300 -z-10"></span>
-              <span class="relative">BACK TO HEROES</span>
+              <span class="relative"> VIEW LESS </span>
             </button>
           </div>
         </div>
