@@ -21,13 +21,13 @@
           :href="member.linkedinUrl"
           target="_blank"
           rel="noopener noreferrer"
-          class="group overflow-hidden rounded-md bg-[rgba(255,255,255,0.02)] border border-[rgba(212,175,55,0.06)] transform transition-all duration-300 will-change-transform hover:-translate-y-2.5 hover:shadow-2xl hover:border-[rgba(212,175,55,0.3)] cursor-pointer no-underline"
+          class="group overflow-hidden rounded-md bg-[rgba(255,255,255,0.02)] border border-[rgba(212,175,55,0.06)] transform transition-all duration-300 will-change-transform hover:shadow-2xl hover:border-[rgba(212,175,55,0.3)] cursor-pointer no-underline"
         >
           <div class="relative w-[250px] h-[250px] overflow-hidden mx-auto bg-[#111]">
             <img
               :src="member.image"
               :alt="member.name"
-              class="w-full h-[260px] object-cover block transition-transform duration-300 ease-in-out origin-center group-hover:scale-105"
+              class="w-full h-[260px] object-cover block transition-transform duration-300 ease-in-out origin-center "
             />
             <div
               class="absolute inset-0 bg-gradient-to-b from-transparent via-black/30 to-black/75 pointer-events-none"
