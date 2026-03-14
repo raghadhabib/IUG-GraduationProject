@@ -1,6 +1,6 @@
 <template>
   <section
-    class="relative pt-20 w-full h-full flex items-center justify-center overflow-hidden"
+    class="relative w-full h-full flex items-center justify-center overflow-hidden"
   >
     <div
       class="absolute inset-0 bg-cover bg-center pointer-events-none"

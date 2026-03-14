@@ -10,9 +10,13 @@
     <div class="scroll-wrapper" @wheel="handleScroll" ref="scrollWrapper">
       <div class="sections-container" ref="sectionsContainer">
         <IntroSection id="intro" />
+        <div class="section-divider"></div>
         <StorySection id="story" />
+        <div class="section-divider"></div>
         <HeroesSection id="heroes" />
+        <div class="section-divider"></div>
         <FilmSection id="film" />
+        <div class="section-divider"></div>
         <TeamSection id="team" />
       </div>
     </div>
@@ -154,17 +158,38 @@ function handleResize() {
   }
 }
 
-.sections-container > * {
+.sections-container > *:not(.section-divider) {
   width: 100%;
   min-height: 100vh;
   flex-shrink: 0;
 }
 
 @media (min-width: 768px) {
-  .sections-container > * {
+  .sections-container > *:not(.section-divider) {
     min-width: 100vw;
     width: 100vw;
     height: 100vh;
+  }
+}
+
+/* Mobile divider */
+.section-divider {
+  flex-shrink: 0;
+  display: block;
+  width: auto;
+  height: 1px;
+  background-color: transparent;
+  margin-top: 50px;
+  margin-bottom: 48px;
+  margin-left: 32px;
+  margin-right: 32px;
+  border: none;
+  border-top: 3px solid #251B02;
+}
+
+@media (min-width: 768px) {
+  .section-divider {
+    display: none;
   }
 }
 </style>

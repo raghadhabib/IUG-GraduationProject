@@ -1,10 +1,10 @@
 <template>
-  <section class="relative w-full h-full overflow-hidden bg-black">
+  <section class="relative  overflow-hidden bg-black">
   <div 
-    class="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
+    class="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat object-contain"
     :style="{ backgroundImage: `url(${filmBg})` }"
   >
-    <div class="absolute inset-0 bg-black/40"></div>
+    <div class="absolute inset-0  bg-black/60"></div>
   </div>
 
     
@@ -44,7 +44,7 @@
 
 <script setup>
 import { ref } from 'vue';
-import filmBg from '../assets/images/story-bg.png'
+import filmBg from '../assets/images/thumnail.PNG'
 
 const isPlaying = ref(false);
 
