@@ -1,5 +1,5 @@
 <template>
-  <section class="flex flex-col items-center justify-center relative pt-20 w-full h-full overflow-hidden bg-black">
+  <section class="flex flex-col items-center justify-center relative md:pt-20 w-full h-full overflow-hidden bg-black">
     <div class="relative z-10 max-w-1400 w-[90%] mx-auto px-8 pt-8">
       <!-- Header -->
       <div class="mb-6 max-w-275">
@@ -61,10 +61,10 @@
 </template>
 
 <script setup>
-import imgA from "../assets/images/mennaGrad2.png";
-import imgB from "../assets/images/Raghad Grad.png";
-import imgC from "../assets/images/AfnanGrad.png";
-import imgD from "../assets/images/shahed.png";
+import imgA from "../assets/images/mennaGrad2.webp";
+import imgB from "../assets/images/newRaghad.jpeg";
+import imgC from "../assets/images/AfnanGrad.webp";
+import imgD from "../assets/images/newShahed.png";
 
 const team = [
   {

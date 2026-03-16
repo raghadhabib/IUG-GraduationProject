@@ -1,5 +1,5 @@
 <template>
-  <section class="relative  overflow-hidden bg-black">
+  <section class="relative  overflow-hidden bg-black ">
   <div 
     class="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat object-contain"
     :style="{ backgroundImage: `url(${filmBg})` }"
@@ -27,7 +27,7 @@
             @click="isPlaying = true"
             class="group relative w-20 h-20 flex items-center justify-center rounded-full border-2 border-white bg-white hover:bg-white/20 transition-all duration-500"
           >
-            <div class="w-0 h-0 border-t-[18px] border-t-transparent border-l-[30px] border-l-[#FF5524] border-b-[18px] border-b-transparent ml-2"></div>
+            <div class="w-0 h-0 border-t-[18px] border-t-transparent border-l-[30px] border-l-[#B8860B] border-b-[18px] border-b-transparent ml-2"></div>
             
             <div class="absolute inset-0 rounded-full border border-white animate-ping opacity-20"></div>
           </button>
@@ -44,7 +44,7 @@
 
 <script setup>
 import { ref } from 'vue';
-import filmBg from '../assets/images/thumnail.PNG'
+import filmBg from '../assets/images/thumnail.webp'
 
 const isPlaying = ref(false);
 

@@ -1,6 +1,6 @@
 <template>
   <section
-    class="relative w-full h-full flex items-center justify-center overflow-hidden"
+    class="relative w-full h-full flex items-center justify-center overflow-hidden "
   >
     <div
       class="absolute inset-0 bg-cover bg-center pointer-events-none"
@@ -15,7 +15,7 @@
       <!-- Text Content -->
       <div class="flex-1 animate-[slideInLeft_1s_ease-out]">
         <h2
-          class="text-6xl lg:text-5xl font-normal mb-8 text-white [text-shadow:0_0_30px_rgba(212,175,55,0.4)]"
+          class="text-6xl lg:text-5xl font-normal my-8 text-white [text-shadow:0_0_30px_rgba(212,175,55,0.4)]"
         >
           The Story
         </h2>
@@ -148,9 +148,9 @@ This film poses this question to three generations: a child, a young woman, and 
 <script setup>
 import { ref } from "vue";
 import storyBg from "../assets/images/story-bg.png";
-import img1 from "../assets/images/sea.png";
-import img2 from "../assets/images/bird.jpeg";
-import img3 from "../assets/images/flowerWithBuilding.jpeg";
+import img1 from "../assets/images/sea.webp";
+import img2 from "../assets/images/bird.webp";
+import img3 from "../assets/images/flowerWithBuilding.webp";
 
 const isExpanded = ref(false);
 </script>
