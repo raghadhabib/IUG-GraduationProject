@@ -180,7 +180,7 @@ function handleResize() {
   height: 1px;
   background-color: transparent;
   margin-top: 50px;
-  margin-bottom: 48px;
+  margin-bottom:10px;
   margin-left: 32px;
   margin-right: 32px;
   border: none;

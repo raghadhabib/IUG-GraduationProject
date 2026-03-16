@@ -4,9 +4,11 @@
     <div class="w-full h-20 bg-black/80 backdrop-blur-lg">
       <div class="max-w-[1400px] mx-auto h-full flex items-center justify-between px-6 lg:px-8">
         <div>
+          <a href="intro">
           <h1 class="text-base md:text-lg font-normal tracking-tight text-white">
             Is Al-Ghazzawi a superhero?
           </h1>
+          </a>
         </div>
 
         <!-- Desktop Menu -->
