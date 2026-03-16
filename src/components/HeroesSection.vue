@@ -82,7 +82,7 @@
           <div v-if="mobileDetailOpen" class="relative w-full animate-[fadeIn_0.6s_ease-out]">
             <div class="relative w-full h-[55vh] overflow-hidden rounded-lg">
               <img
-                src="../assets/images/heroDetails.png"
+                src="../assets/images/heroDetails.webp"
                 alt="+2.51 Million Ghazzawi"
                 class="w-full h-full object-cover object-center"
               />
