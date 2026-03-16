@@ -1,10 +1,10 @@
 <template>
   <section
-    class="relative pt-20 w-full h-full flex justify-center overflow-hidden bg-black"
+    class="relative md:pt-20 w-full h-full flex justify-center overflow-hidden bg-black"
     :class="detailView ? 'items-start' : 'items-center'"
   >
     <div class="relative z-10 max-w-350 w-[90%] px-8 mx-auto"
-    :class="detailView ? 'py-8' : 'py-16'">
+    :class="detailView ? 'py-8' : 'py-10'">
 
       <h2 class="text-6xl lg:text-5xl md:text-4xl font-normal text-white mb-4">
         The Heroes
@@ -90,7 +90,7 @@
               <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
               <div class="absolute bottom-0 left-0 right-0 pb-8 px-6 text-white">
                 <h3 class="text-3xl font-light mb-3">+2.51 Million Ghazzawi</h3>
-                <p class="text-sm text-white/80 italic leading-relaxed">From all the people of Gaza — of all ages, circumstances, and conditions — what was shown is just a glimpse, a single example.</p>
+                <p class="text-sm text-white/80 leading-relaxed">From all the people of Gaza — of all ages, circumstances, and conditions — what was shown is just a glimpse, a single example.</p>
               </div>
             </div>
           </div>
@@ -126,7 +126,7 @@
         <div class="relative w-full rounded-sm" style="overflow: visible;">
           <div class="relative w-full h-[55vh] overflow-hidden">
             <img
-              src="../assets/images/heroDetails.png"
+              src="../assets/images/heroDetails.webp"
               :alt="detailHero.name"
               class="w-full h-full object-cover object-center"
             />
@@ -134,7 +134,7 @@
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
             <div class="absolute bottom-0 left-0 right-0 pb-8 px-8 text-start text-white">
               <h3 class="text-5xl lg:text-6xl md:text-4xl font-light mb-3">+2.51 Million Ghazzawi</h3>
-              <p class="text-base sm:text-2xl text-white/80 italic text-start">From all the people of Gaza — of all ages, circumstances, and conditions — what was shown is just a glimpse, a single example.</p>
+              <p class="text-sm sm:text-2xl text-white/80  text-start">From all the people of Gaza — of all ages, circumstances, and conditions — what was shown is just a glimpse, a single example.</p>
             </div>
           </div>
           <div class="flex justify-end">
@@ -155,9 +155,9 @@
 
 <script setup>
 import { ref, computed } from "vue";
-import imgA from "../assets/images/hifa.png";
-import imgB from "../assets/images/yousf.png";
-import rightBg from "../assets/images/Hajj_Ibrahim.PNG";
+import imgA from "../assets/images/hifa.webp";
+import imgB from "../assets/images/yousf.webp";
+import rightBg from "../assets/images/Hajj_Ibrahim.webp";
 
 const slidesData = ref([
   [
