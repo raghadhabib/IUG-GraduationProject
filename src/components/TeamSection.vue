@@ -27,7 +27,7 @@
             <img
               :src="member.image"
               :alt="member.name"
-              class="w-full h-[260px] object-cover block transition-transform duration-300 ease-in-out origin-center "
+              class="w-full h-[255px] object-cover block transition-transform duration-300 ease-in-out origin-center "
             />
             <div
               class="absolute inset-0 bg-gradient-to-b from-transparent via-black/30 to-black/75 pointer-events-none"
@@ -62,9 +62,9 @@
 
 <script setup>
 import imgA from "../assets/images/mennaGrad2.webp";
-import imgB from "../assets/images/newRaghad.jpeg";
+import imgB from "../assets/images/raghedGrad copy.webp";
 import imgC from "../assets/images/AfnanGrad.webp";
-import imgD from "../assets/images/newShahed.png";
+import imgD from "../assets/images/shahedGrad copy.webp";
 
 const team = [
   {
