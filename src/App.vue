@@ -7,6 +7,28 @@
       @navigate="navigateToSection"
     />
 
+    <!-- Desktop navigation arrows -->
+    <button
+      v-if="currentSectionIndex > 0"
+      @click="scrollToIndex(currentSectionIndex - 1)"
+      class="hidden md:flex fixed left-4 top-1/2 -translate-y-1/2 z-50 w-9 h-9 items-center justify-center border border-white/15 bg-black/40 backdrop-blur-sm text-white/40 hover:text-white/80 hover:border-white/40 transition-all duration-300 cursor-pointer rounded-full"
+      aria-label="Previous section"
+    >
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M15 18l-6-6 6-6"/>
+      </svg>
+    </button>
+    <button
+      v-if="currentSectionIndex < sections.length - 1"
+      @click="scrollToIndex(currentSectionIndex + 1)"
+      class="hidden md:flex fixed right-4 top-1/2 -translate-y-1/2 z-50 w-9 h-9 items-center justify-center border border-white/15 bg-black/40 backdrop-blur-sm text-white/40 hover:text-white/80 hover:border-white/40 transition-all duration-300 cursor-pointer rounded-full"
+      aria-label="Next section"
+    >
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M9 18l6-6-6-6"/>
+      </svg>
+    </button>
+
     <div class="scroll-wrapper" @wheel="handleScroll" ref="scrollWrapper">
       <div class="sections-container" ref="sectionsContainer">
         <IntroSection id="intro" />
@@ -179,8 +201,8 @@ function handleResize() {
   width: auto;
   height: 1px;
   background-color: transparent;
-  margin-top: 50px;
-  margin-bottom:10px;
+  margin-top: 36px;
+  margin-bottom: 36px;
   margin-left: 32px;
   margin-right: 32px;
   border: none;

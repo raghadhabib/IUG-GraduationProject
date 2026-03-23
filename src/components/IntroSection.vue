@@ -165,28 +165,26 @@ const toggleMute = () => {
 */
 
 .state-1 {
-  animation: state1Anim 4s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+  animation: state1Anim 3.6s ease-in-out infinite;
 }
 .state-2 {
-  animation: state2Anim 4s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+  animation: state2Anim 3.6s ease-in-out infinite;
 }
 
 @keyframes state1Anim {
-  0%   { opacity: 1;   transform: translateY(0px);   }
-  30%  { opacity: 1;   transform: translateY(8px);   }
-  45%  { opacity: 0;   transform: translateY(14px);  }
-  75%  { opacity: 0;   transform: translateY(-8px);  }
-  90%  { opacity: 0;   transform: translateY(-4px);  }
-  100% { opacity: 1;   transform: translateY(0px);   }
+  0%   { opacity: 1;   transform: translateY(0px);  }
+  35%  { opacity: 1;   transform: translateY(10px); }
+  50%  { opacity: 0;   transform: translateY(16px); }
+  80%  { opacity: 0;   transform: translateY(-6px); }
+  100% { opacity: 1;   transform: translateY(0px);  }
 }
 
 @keyframes state2Anim {
-  0%   { opacity: 0;   transform: translateY(-8px);  }
-  30%  { opacity: 0;   transform: translateY(-8px);  }
-  45%  { opacity: 1;   transform: translateY(0px);   }
-  75%  { opacity: 1;   transform: translateY(8px);   }
-  90%  { opacity: 0;   transform: translateY(14px);  }
-  100% { opacity: 0;   transform: translateY(-8px);  }
+  0%   { opacity: 0;   transform: translateY(-6px); }
+  35%  { opacity: 0;   transform: translateY(-6px); }
+  50%  { opacity: 1;   transform: translateY(0px);  }
+  85%  { opacity: 1;   transform: translateY(10px); }
+  100% { opacity: 0;   transform: translateY(16px); }
 }
 
 .swipe-label {

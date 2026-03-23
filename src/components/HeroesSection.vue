@@ -4,27 +4,27 @@
     :class="detailView ? 'items-start' : 'items-center'"
   >
     <div
-      class="relative z-10 max-w-350 w-[90%] px-8 mx-auto"
-      :class="detailView ? 'py-8' : 'py-10'"
+      class="relative z-10 max-w-350 w-[90%] px-4 md:px-8 mx-auto"
+      :class="detailView ? 'py-8' : 'py-6 lg:py-10'"
     >
-      <h2 class="text-6xl lg:text-5xl md:text-4xl font-normal text-white mb-4">
+      <h2 class="text-5xl md:text-4xl lg:text-5xl font-normal text-white mb-2">
         The Heroes
       </h2>
-      <p class="text-xl md:text-lg text-white/70 mb-2 font-normal max-w-200">
+      <p class="text-base md:text-sm lg:text-lg text-white/70 mb-2 font-normal max-w-200">
         Meet the extraordinary individuals whose courage and resilience
         illuminate the true spirit of Gaza.
       </p>
 
       <!-- ─── CARD GRID VIEW ─── -->
-      <div v-if="!detailView" class="relative mt-10">
-        <!-- Desktop: 3 equal cards -->
-        <div class="hidden md:grid grid-cols-3 gap-6">
+      <div v-if="!detailView" class="relative mt-6 md:mt-8">
+        <!-- Desktop/tablet: 3 equal cards -->
+        <div class="hidden md:grid grid-cols-3 gap-4 lg:gap-6">
           <div
             v-for="(hero, index) in getCurrentSlideHeroes"
             :key="index"
             class="group relative bg-black overflow-hidden"
           >
-            <div class="relative w-full h-[380px] overflow-hidden">
+            <div class="relative w-full h-[44vh] lg:h-[380px] overflow-hidden">
               <img
                 :src="hero.image"
                 :alt="hero.name"
@@ -34,26 +34,27 @@
               <div
                 class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-black/10 transition-all duration-500 group-hover:from-black group-hover:via-black/90 group-hover:to-black/70"
               ></div>
-              <div class="absolute bottom-0 left-0 right-0 p-6 pb-7 text-white">
+              <div class="absolute bottom-0 left-0 right-0 p-4 lg:p-6 pb-5 lg:pb-7 text-white">
                 <p
-                  class="text-yellow-600 text-xs uppercase tracking-wider mb-2 font-medium"
+                  class="text-yellow-600 text-[10px] lg:text-xs uppercase tracking-wider mb-1 lg:mb-2 font-medium"
                 >
                   {{ hero.role }}
                 </p>
-                <h3 class="text-2xl font-light leading-tight">
+                <h3 class="text-lg lg:text-2xl font-light leading-tight mb-2">
                   {{ hero.name }}
                 </h3>
+                <!-- Description + quote: border always visible on tablet (no hover on touch) -->
                 <div
-                  class="max-h-0 opacity-0 group-hover:max-h-40 group-hover:opacity-100 overflow-hidden transition-all duration-500 ease-in-out mb-0 group-hover:mb-3 rounded px-3 py-2"
+                  class="border-l-2 border-yellow-600/50 pl-3 lg:border-0 lg:pl-0 transition-all duration-300 lg:group-hover:border-l-2 lg:group-hover:border-yellow-600 lg:group-hover:pl-3"
                 >
-                  <p class="text-white/85 text-sm leading-relaxed">
-                    {{ hero.description }}
-                  </p>
-                </div>
-                <div
-                  class="transition-all duration-300 group-hover:border-l-2 group-hover:border-yellow-600 group-hover:pl-3"
-                >
-                  <p class="text-white/75 italic text-sm leading-relaxed">
+                  <div
+                    class="hidden lg:block max-h-0 opacity-0 group-hover:max-h-40 group-hover:opacity-100 overflow-hidden transition-all duration-500 ease-in-out group-hover:mb-3"
+                  >
+                    <p class="text-white/85 text-sm leading-relaxed">
+                      {{ hero.description }}
+                    </p>
+                  </div>
+                  <p class="text-white/75 italic text-xs lg:text-sm leading-relaxed">
                     {{ hero.quote }}
                   </p>
                 </div>
@@ -73,7 +74,7 @@
               />
               <div class="vignette"></div>
               <div
-                class="absolute inset-0 bg-gradient-to-t from-black via-black/90 to-black/70"
+                class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"
               ></div>
               <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
                 <p
@@ -84,14 +85,8 @@
                 <h3 class="text-2xl font-light leading-tight mb-3">
                   {{ hero.name }}
                 </h3>
-                <!-- description hidden on mobile -->
-                <div class="hidden">
-                  <p class="text-white/85 text-sm leading-relaxed">
-                    {{ hero.description }}
-                  </p>
-                </div>
                 <div class="border-l-2 border-yellow-600 pl-3">
-                  <p class="text-white/75 italic text-sm leading-relaxed">
+                  <p class="text-white/80 italic text-sm leading-relaxed">
                     {{ hero.quote }}
                   </p>
                 </div>
@@ -129,7 +124,7 @@
         </div>
 
         <!-- View More / View Less button -->
-        <div class="flex justify-end mb-4 mt-6">
+        <div class="flex justify-end mb-2 mt-4">
           <!-- Desktop button -->
           <button
             class="hidden md:block relative px-10 py-3.5 text-sm tracking-[2px] uppercase border-2 border-gold bg-gold text-white transition-all duration-300 overflow-hidden group cursor-pointer"
@@ -239,8 +234,8 @@ const slidesData = ref([
 ]);
 
 const currentSlide = ref(0);
-const detailView = ref(false); // desktop full-page detail
-const mobileDetailOpen = ref(false); // mobile inline detail
+const detailView = ref(false);
+const mobileDetailOpen = ref(false);
 const detailHeroIndex = ref(0);
 
 const getCurrentSlideHeroes = computed(
