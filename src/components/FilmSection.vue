@@ -12,9 +12,16 @@
     <div class="relative z-10 w-full h-full flex flex-col items-center justify-center px-8">
       <div class="relative w-full max-w-[1000px] aspect-video group">
         
-        <iframe 
-         v-if="isPlaying"
-        width="560" height="315" src="https://www.youtube.com/embed/ivP-1oSuQxc?si=aZqw_dLoDBO9mUUj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe
+          v-if="isPlaying"
+          class="absolute inset-0 w-full h-full"
+          src="https://www.youtube.com/embed/ivP-1oSuQxc?si=aZqw_dLoDBO9mUUj&autoplay=1"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
 
         <div v-else class="absolute inset-0 flex flex-col items-center justify-center">
           <button 
