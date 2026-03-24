@@ -4,7 +4,7 @@
     <div class="w-full h-20 bg-black/80 backdrop-blur-lg">
       <div class="max-w-[1400px] mx-auto h-full flex items-center justify-between px-6 lg:px-8">
         <div>
-          <a href="intro">
+          <a href="#" @click.prevent="scrollToSection('intro')">
           <h1 class="text-base md:text-lg font-normal tracking-tight text-white">
             Is Al-Ghazzawi a superhero?
           </h1>
@@ -45,37 +45,37 @@
           </div>
         </button>
 
-        <!-- Mobile Menu Overlay -->
-        <div
-  v-if="isMenuOpen"
-  class="fixed top-0 left-0 w-screen md:hidden flex flex-col items-center"
-  style="background-color: rgba(0,0,0,0.9); backdrop-filter: blur(10px); z-index: 999;"
->
-  <!-- Close button -->
-  <button
-    @click="toggleMenu"
-    class="cursor-pointer self-end px-6 py-4 text-white text-2xl"
-    aria-label="Close menu"
-  >
-    ✕
-  </button>
-
-  <ul class="flex flex-col gap-6 w-full px-8 py-5 text-center">
-    <li v-for="item in navItems" :key="item.id">
-      <a
-      
-        @click.prevent="scrollToSection(item.id)"
-        href="#"
-        class="text-lg font-medium tracking-[2px] uppercase transition-all duration-300 cursor-pointer block py-2"
-        :style="activeSection === item.id ? { color: item.color } : {}"
-        :class="activeSection === item.id ? '' : 'text-gray-300 hover:text-white'"
-      >
-        {{ item.name }}
-      </a>
-    </li>
-  </ul>
-</div>
       </div>
+    </div>
+
+    <!-- Mobile Menu Overlay — outside the constrained container -->
+    <div
+      v-if="isMenuOpen"
+      class="fixed inset-0 md:hidden flex flex-col"
+      style="background-color: #000; z-index: 998;"
+    >
+      <!-- Close button -->
+      <button
+        @click="toggleMenu"
+        class="cursor-pointer self-end px-6 py-6 text-white text-2xl"
+        aria-label="Close menu"
+      >
+        ✕
+      </button>
+
+      <ul class="flex flex-col items-center justify-center flex-1 gap-8 w-full px-8 text-center">
+        <li v-for="item in navItems" :key="item.id">
+          <a
+            @click.prevent="scrollToSection(item.id)"
+            href="#"
+            class="text-lg font-medium tracking-[2px] uppercase transition-all duration-300 cursor-pointer block py-2"
+            :style="activeSection === item.id ? { color: item.color } : {}"
+            :class="activeSection === item.id ? '' : 'text-gray-300 hover:text-white'"
+          >
+            {{ item.name }}
+          </a>
+        </li>
+      </ul>
     </div>
 
     <!-- Merged gradient progress line -->
