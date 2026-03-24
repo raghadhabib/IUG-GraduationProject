@@ -28,38 +28,20 @@
             class="group relative w-20 h-20 flex items-center justify-center rounded-full border-2 border-white bg-white hover:bg-white/20 transition-all duration-500"
           >
             <div class="w-0 h-0 border-t-[18px] border-t-transparent border-l-[30px] border-l-[#B8860B] border-b-[18px] border-b-transparent ml-2"></div>
-            
             <div class="absolute inset-0 rounded-full border border-white animate-ping opacity-20"></div>
           </button>
-          
           <div class="mt-6 text-center">
             <span class="block text-white text-lg tracking-[4px]  mb-1">Click To Watch Film</span>
-            
           </div>
         </div> 
       </div>
     </div>
   </section>
 </template>
-
 <script setup>
 import { ref } from 'vue';
 import filmBg from '../assets/images/thumnail.webp'
-
 const isPlaying = ref(false);
-
-const shareLink = () => {
-  if (navigator.share) {
-    navigator.share({
-      title: 'Is Al-Ghazzawi a superhero?',
-      url: window.location.href
-    });
-  } else {
-    // Fallback for browsers that don't support native share
-    navigator.clipboard.writeText(window.location.href);
-    alert('Link copied to clipboard!');
-  }
-};
 </script>
 
 <style scoped>

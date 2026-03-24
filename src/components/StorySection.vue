@@ -6,7 +6,6 @@
       class="absolute inset-0 bg-cover bg-center pointer-events-none"
       :style="{ backgroundImage: `url(${storyBg})` }"
     />
-
     <!-- COLLAPSED layout (default) -->
     <div
       v-if="!isExpanded"
@@ -44,7 +43,6 @@ This film poses this question to three generations: a child, a young woman, and 
           <span class="relative text-white">Read More</span>
         </button>
       </div>
-
       <!-- Image Content -->
       <div class="flex-1 animate-[slideInRight_1s_ease-out]">
         <div class="story-grid w-full flex items-center flex-col gap-3">
@@ -62,7 +60,6 @@ This film poses this question to three generations: a child, a young woman, and 
         </div>
       </div>
     </div>
-
     <!-- EXPANDED layout -->
     <div
       v-else
@@ -73,7 +70,6 @@ This film poses this question to three generations: a child, a young woman, and 
       >
         The Story
       </h2>
-
       <div class="flex flex-col lg:flex-row gap-8 items-start">
 
         <div class="flex-1 flex flex-col gap-5">
@@ -129,7 +125,6 @@ This film poses this question to three generations: a child, a young woman, and 
         </div>
 
       </div>
-
       <div class="w-24 h-0.5 bg-linear-to-r from-gold to-transparent mt-8 mb-6 ml-auto"></div>
       <div class="flex justify-end">
         <button
