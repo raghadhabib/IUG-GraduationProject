@@ -87,7 +87,7 @@
 <script setup>
 import imgA from "../assets/images/mennaGrad2.webp";
 import imgB from "../assets/images/raghedGrad copy.webp";
-import imgC from "../assets/images/AfnanGrad.webp";
+import imgC from "../assets/images/afnaan.jpeg";
 import imgD from "../assets/images/shahedGrad copy.webp";
 
 const team = [
