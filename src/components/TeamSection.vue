@@ -6,7 +6,7 @@
       <!-- Header -->
       <div class="mb-6 max-w-275">
         <h2
-          class="text-6xl lg:text-5xl text-white font-normal -tracking-[1px] drop-shadow-[0_10px_30px_rgba(0,0,0,0.6)] mb-4"
+          class="text-6xl lg:text-5xl text-white font-normal -tracking-[1px] drop-shadow-[0_10px_30px_rgba(0,0,0,0.6)] mb-2"
         >
           The Team
         </h2>

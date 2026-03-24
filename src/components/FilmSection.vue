@@ -12,7 +12,7 @@
 
         <iframe
           v-if="isPlaying"
-          class="absolute inset-0 w-full h-full"
+          class="absolute inset-4 w-full h-full"
           src="https://www.youtube.com/embed/ivP-1oSuQxc?si=aZqw_dLoDBO9mUUj&autoplay=1"
           title="YouTube video player"
           frameborder="0"
@@ -24,7 +24,7 @@
         <div v-else class="absolute inset-0 flex flex-col items-center justify-center">
           <button
             @click="isPlaying = true"
-            class="group relative w-16 h-16 md:w-20 md:h-20 flex items-center justify-center rounded-full border-2 border-white bg-white hover:bg-white/20 transition-all duration-500"
+            class="group cursor-pointer relative w-16 h-16 md:w-20 md:h-20 flex items-center justify-center rounded-full border-2 border-white bg-white hover:bg-white/20 transition-all duration-500"
           >
             <div class="w-0 h-0 border-t-[14px] border-t-transparent border-l-[24px] border-l-[#B8860B] border-b-[14px] border-b-transparent ml-1.5 md:border-t-[18px] md:border-l-[30px] md:border-b-[18px] md:ml-2"></div>
             <div class="absolute inset-0 rounded-full border border-white animate-ping opacity-20"></div>
