@@ -1,25 +1,20 @@
 @import "tailwindcss";
-
 @theme {
   /* Custom Colors */
   --color-gold: #d4af37;
   --color-purple: #9333ea;
   --color-white: #fff;
-
   /* Custom Fonts */
   --font-family-cinzel: "Times New Roman", serif;
   --font-family-raleway: "IBM Plex Sans", sans-serif;
-
-  /* Custom Breakpoints (optional - v4 has good defaults) */
+  /* Custom Breakpoints */
   --breakpoint-sm: 640px;
   --breakpoint-md: 768px;
   --breakpoint-lg: 1024px;
   --breakpoint-xl: 1280px;
   --breakpoint-2xl: 1536px;
 }
-
 @layer base {
-
   h1,
   h2,
   h3,
@@ -28,7 +23,6 @@
   h6 {
     font-family: var(--font-family-cinzel);
   }
-
   body,
   p,
   a,

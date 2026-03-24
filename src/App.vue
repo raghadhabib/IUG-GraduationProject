@@ -152,7 +152,7 @@ function handleResize() {
 
 @media (min-width: 768px) {
   .sections-container {
-    flex-direction: row;
+    flex-direction: row;  
     height: 100vh;
     width: auto;
   }
