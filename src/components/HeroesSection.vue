@@ -204,7 +204,7 @@ import rightBg from "../assets/images/Hajj_Ibrahim.webp";
 const slidesData = ref([
   [
     {
-      name: "Yosuf hassn, 15",
+      name: "Yosuf Imad, 15",
       role: "Karate Player",
       quote:
         '" I love karate, and my soul is deeply connected to it. All my sorrow for Gaza, I used to release through karate. "',

@@ -106,7 +106,7 @@ const team = [
     linkedinUrl: "https://www.linkedin.com/in/raghadhabib/",
   },
   {
-    name: "Afnan Al-ahqar",
+    name: "Afnan Al-ashqar",
     role: "Film Maker",
     bio: "Afnan is behind the camera — she directed the documentary and captured something honest in every frame.",
     image: imgC,
