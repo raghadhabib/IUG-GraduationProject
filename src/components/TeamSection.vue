@@ -94,7 +94,7 @@ const team = [
   {
     name: "Menna Baker",
     role: "Website Designer",
-    bio: "Menna shaped the visual identity of this project — every layout and color choice was intentional.",
+    bio: "Menna led the website’s design, from UX analysis and user flows to the final UI and visual direction.",
     image: imgA,
     linkedinUrl: "https://www.linkedin.com/in/menna-baker/",
   },
